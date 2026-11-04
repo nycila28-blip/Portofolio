@@ -1,0 +1,373 @@
+/*Reset dasar*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fbf1f1;
+  color: #3a1f1f
+}
+
+/*==== Beranda ====*/
+
+.beranda {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  text-align: center;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.sapaan {
+  font-size: 1.1rem;
+  color: #800000;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 8px 0;
+}
+
+.subjudul {
+  margin-bottom: 32px;
+  color: #7a6565;
+}
+
+/* Menu berupa kartu*/
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.kartu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 140px;
+  padding: 20px 12px;
+  background: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #3a1f1f;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(123, 97, 225, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kartu:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(128, 0, 0, 0.3);
+}
+
+.ikon {
+  font-size: 2rem;
+}
+
+/* Hiasan lingkaran di latar */
+.bulat {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.bulat-1 {
+  width: 260pz;
+  height: 260px;
+  background: #ebc9c9;
+  top: -80px;
+  left: -80px;
+}
+
+.bulat-2 {
+  width: 200px;
+  height: 200px;
+  background: #f2c4c4;
+  bottom: -60px;
+  right: -60px;
+}
+
+/* ===== Halaman dalam ===== */
+
+/* Bar navigasi atas */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 32px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(128, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #800000;
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #3a1f1f;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.navbar nav a:hover {
+  background: #f6e3e3;
+}
+
+.navbar nav a.aktif {
+  background: #800000;
+  color: white;
+}
+
+/* Kotak isi halaman */
+.konten {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.12);
+}
+
+.konten h2 {
+  color: #800000;
+  margin-bottom: 16px;
+}
+
+.konten p {
+  line-height: 1.7;
+}
+
+.konten ul {
+  padding-left: 24px;
+  line-height: 1.9;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #7a6565;
+}
+
+/* ===== Halaman keuangan ===== */
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border: 1px solid #ebc9c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: 2px solid #800000;
+}
+
+.form button {
+  grid-column: 1 / -1;
+  padding: 12px;
+  background: #800000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form button:hover {
+  background: #5c0000;
+}
+
+.ringkasan {
+  background: #fbf1f1;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #800000;
+  margin: 4px 0 12px;
+}
+
+.ringkasan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.daftar {
+  list-style: none;
+  padding: 0;
+}
+
+.daftar li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f6e3e3;
+}
+
+.daftar small {
+  color: #7a6565;
+}
+
+.daftar .kanan {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+}
+
+.hapus {
+  background: #ffe3e3;
+  color: #c92a2a;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hapus:hover {
+  background: #ffc9c9;
+}
+
+/* ===== Navigasi bulan ===== */
+.bulan-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bulan-nav h3 {
+  font-size: 1.4rem;
+}
+
+.bulan-nav button {
+  background: #f6e3e3;
+  color: #800000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bulan-nav button:hover {
+  background: #ebc9c9;
+}
+
+/* ===== Form gaji dan ringkasan ===== */
+.form-gaji {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.form-gaji label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-gaji input {
+  padding: 10px;
+  border: 1px solid #ebc9c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-gaji button {
+  padding: 11px 18px;
+  background: #800000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.angka {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.angka small {
+  color: #7a6565;
+}
+
+.angka p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sisa {
+  color: #2b8a3e;
+}
+
+.sisa.minus {
+  color: #c92a2a;
+}

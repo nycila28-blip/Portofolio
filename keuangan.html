@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Keuangan | Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Naysila Rahil Maulana</a>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="skill.html">Skill</a>
+            <a href="keuangan.html" class="active">Catatan Keuangan</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
+
+    <main class="konten">
+        <h2>Catatan Keuangan</h2>
+
+        <div class="bulan-nav">
+            <button type="button" id="bulan-sebelumnya">◀</button>
+            <h3 id="judul-bulan">November 2026</h3>
+            <button type="button" id="bulan-berikutnya">▶</button>
+        </div>
+
+        <section class="ringkasan">
+            <form id="form-gaji" class="form-gaji">
+                <label>
+                    Gaji / pemasukan bulan ini (Rp)
+                    <input type="number" id="gaji" min="0" placeholder="Contoh: 4400000" required>
+                </label>
+                <button type="submit">Simpan Gaji</button>
+            </form>
+
+            <div class="angka">
+                <div>
+                    <small>Gaji</small>
+                    <p id="tampil-gaji">Rp 0</p>
+                </div>
+                <div>
+                    <small>Pengeluaran</small>
+                    <p id="total">Rp 0</p>
+                </div>
+                <div>
+                    <small>Sisa uang</small>
+                    <p id="sisa" class="sisa">Rp 0</p>
+                </div>
+            </div>
+
+            <ul id="per-kategori"></ul>
+        </section>
+
+        <form id="form-pengeluaran" class="form">
+            <label>
+                Tanggal
+                <input type="date" id="tanggal" required>
+            </label>
+
+            <label>
+                Keterangan
+                <input type="text" id="keterangan" placeholder="Contoh: makan siang" required>
+            </label>
+
+            <label>
+                Kategori
+                <select id="kategori">
+                    <option value="Makan">Makan</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Jajan">Jajan</option>
+                    <option value="Belanja">Belanja</option>
+                    <option value="Pendidikan">Pendidikan</option>
+                    <option value="Kopi">Kopi</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </label>
+
+            <label>
+                Nominal (Rp)
+                <input type="number" id="nominal" min="1" placeholder="Contoh: 15000" required>
+            </label>
+
+            <button type="submit">Simpan Pengeluaran</button>
+        </form>
+
+        <h3>Daftar Pengeluaran</h3>
+        <p id="kosong">Belum ada pengeluaran di bulan ini.</p>
+        <ul id="daftar" class="daftar"></ul>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Naysila Rahil Maulana. All rights reserved.</p>
+    </footer>
+
+    <script src="keuangan.js"></script>
+</body>
+
+</html>
