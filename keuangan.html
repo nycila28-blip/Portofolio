@@ -22,83 +22,112 @@
     </header>
 
     <main class="konten">
-        <h2>Catatan Keuangan</h2>
+        <main class="konten">
+            <h2>Catatan Keuangan</h2>
 
-        <div class="bulan-nav">
-            <button type="button" id="bulan-sebelumnya">◀</button>
-            <h3 id="judul-bulan">November 2026</h3>
-            <button type="button" id="bulan-berikutnya">▶</button>
-        </div>
-
-        <section class="ringkasan">
-            <form id="form-gaji" class="form-gaji">
-                <label>
-                    Gaji / pemasukan bulan ini (Rp)
-                    <input type="number" id="gaji" min="0" placeholder="Contoh: 4400000" required>
-                </label>
-                <button type="submit">Simpan Gaji</button>
-            </form>
-
-            <div class="angka">
-                <div>
-                    <small>Gaji</small>
-                    <p id="tampil-gaji">Rp 0</p>
-                </div>
-                <div>
-                    <small>Pengeluaran</small>
-                    <p id="total">Rp 0</p>
-                </div>
-                <div>
-                    <small>Sisa uang</small>
-                    <p id="sisa" class="sisa">Rp 0</p>
-                </div>
+            <div class="bulan-nav">
+                <button type="button" id="bulan-sebelumnya">◀</button>
+                <h3 id="judul-bulan">November 2026</h3>
+                <button type="button" id="bulan-berikutnya">▶</button>
             </div>
 
-            <ul id="per-kategori"></ul>
-        </section>
+            <section class="ringkasan">
+                <form id="form-gaji" class="form-gaji">
+                    <label>
+                        Gaji bulan ini (Rp)
+                        <input type="number" id="gaji" min="0" placeholder="Contoh: 4400000" required>
+                    </label>
+                    <button type="submit">Simpan Gaji</button>
+                </form>
 
-        <form id="form-pengeluaran" class="form">
-            <label>
-                Tanggal
-                <input type="date" id="tanggal" required>
-            </label>
+                <div class="angka">
+                    <div>
+                        <small>Gaji</small>
+                        <p id="tampil-gaji">Rp 0</p>
+                    </div>
+                    <div>
+                        <small>Pemasukan lain</small>
+                        <p id="tampil-masuk">Rp 0</p>
+                    </div>
+                    <div>
+                        <small>Pengeluaran</small>
+                        <p id="total">Rp 0</p>
+                    </div>
+                    <div>
+                        <small>Sisa uang</small>
+                        <p id="sisa" class="sisa">Rp 0</p>
+                    </div>
+                </div>
 
-            <label>
-                Keterangan
-                <input type="text" id="keterangan" placeholder="Contoh: makan siang" required>
-            </label>
+                <ul id="per-kategori"></ul>
+            </section>
 
-            <label>
-                Kategori
-                <select id="kategori">
-                    <option value="Makan">Makan</option>
-                    <option value="Transport">Transport</option>
-                    <option value="Jajan">Jajan</option>
-                    <option value="Belanja">Belanja</option>
-                    <option value="Pendidikan">Pendidikan</option>
-                    <option value="Kopi">Kopi</option>
-                    <option value="Lainnya">Lainnya</option>
-                </select>
-            </label>
+            <h3>Tambah Pemasukan Lain</h3>
+            <form id="form-pemasukan" class="form form-masuk">
+                <label>
+                    Tanggal
+                    <input type="date" id="tanggal-masuk" required>
+                </label>
 
-            <label>
-                Nominal (Rp)
-                <input type="number" id="nominal" min="1" placeholder="Contoh: 15000" required>
-            </label>
+                <label>
+                    Keterangan
+                    <input type="text" id="keterangan-masuk" placeholder="Contoh: freelance desain" required>
+                </label>
 
-            <button type="submit">Simpan Pengeluaran</button>
-        </form>
+                <label>
+                    Nominal (Rp)
+                    <input type="number" id="nominal-masuk" min="1" placeholder="Contoh: 300000" required>
+                </label>
 
-        <h3>Daftar Pengeluaran</h3>
-        <p id="kosong">Belum ada pengeluaran di bulan ini.</p>
-        <ul id="daftar" class="daftar"></ul>
-    </main>
+                <button type="submit">Simpan Pemasukan</button>
+            </form>
 
-    <footer class="footer">
-        <p>&copy; 2026 Naysila Rahil Maulana. All rights reserved.</p>
-    </footer>
+            <h3>Tambah Pengeluaran</h3>
+            <form id="form-pengeluaran" class="form">
+                <label>
+                    Tanggal
+                    <input type="date" id="tanggal" required>
+                </label>
 
-    <script src="keuangan.js"></script>
+                <label>
+                    Keterangan
+                    <input type="text" id="keterangan" placeholder="Contoh: makan siang" required>
+                </label>
+
+                <label>
+                    Kategori
+                    <select id="kategori">
+                        <option value="Makan">Makan</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Jajan">Jajan</option>
+                        <option value="Belanja">Belanja</option>
+                        <option value="Pendidikan">Pendidikan</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </label>
+
+                <label>
+                    Nominal (Rp)
+                    <input type="number" id="nominal" min="1" placeholder="Contoh: 15000" required>
+                </label>
+
+                <button type="submit">Simpan Pengeluaran</button>
+            </form>
+
+            <h3>Daftar Pemasukan Lain</h3>
+            <p id="kosong-masuk">Belum ada pemasukan lain di bulan ini.</p>
+            <ul id="daftar-masuk" class="daftar"></ul>
+
+            <h3>Daftar Pengeluaran</h3>
+            <p id="kosong">Belum ada pengeluaran di bulan ini.</p>
+            <ul id="daftar" class="daftar"></ul>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Naysila Rahil Maulana. All rights reserved.</p>
+        </footer>
+
+        <script src="keuangan.js"></script>
 </body>
 
 </html>

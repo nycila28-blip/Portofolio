@@ -371,3 +371,28 @@ body {
 .sisa.minus {
   color: #c92a2a;
 }
+
+/* ===== Pemasukan lain ===== */
+.konten h3 {
+  margin: 24px 0 12px;
+}
+
+.bulan-nav h3 {
+  margin: 0;
+}
+
+.form-masuk button {
+  background: #2b8a3e;
+}
+
+.form-masuk button:hover {
+  background: #237032;
+}
+
+.nominal-masuk {
+  color: #2b8a3e;
+}
+
+.nominal-keluar {
+  color: #3a1f1f;
+}
